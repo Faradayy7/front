@@ -1,6 +1,5 @@
 const API_URL = "https://backend-8xsi.onrender.com";
 
-// Cargar dispositivos en la administración
 async function cargarDispositivosAdmin() {
   try {
     const response = await fetch(`${API_URL}/dispositivos`);
@@ -11,7 +10,6 @@ async function cargarDispositivosAdmin() {
   }
 }
 
-// Renderizar dispositivos en el panel de administración
 function renderizarDispositivosAdmin(dispositivos) {
   const lista = document.getElementById("lista-dispositivos");
   if (!lista) {
@@ -33,7 +31,7 @@ function renderizarDispositivosAdmin(dispositivos) {
   });
 }
 
-// Esperar a que el DOM esté cargado antes de ejecutar el script
+
 document.addEventListener("DOMContentLoaded", () => {
   cargarDispositivosAdmin();
 
@@ -63,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-// Editar un dispositivo
+
 function editarDispositivo(id) {
   window.location.href = `editar.html?id=${id}`;
 }
