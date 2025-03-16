@@ -6,7 +6,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
   document.body.innerHTML = "<h3>Error: Dispositivo no encontrado.</h3>";
 } else {
 
-  fetch(`http://localhost:5000/dispositivos/${dispositivoId}`)
+  fetch(`https://backend-8xsi.onrender.com/dispositivos/${dispositivoId}`)
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {
@@ -20,7 +20,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
     .catch((error) => console.error("Error al obtener el dispositivo:", error));
 
   
-  fetch(`http://localhost:5000/comentarios/${dispositivoId}`)
+  fetch(`https://backend-8xsi.onrender.com/comentarios/${dispositivoId}`)
     .then((response) => response.json())
     .then((comentarios) => {
       const comentariosContainer = document.getElementById("comentarios");
@@ -50,7 +50,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
       const usuario = document.getElementById("usuario").value;
       const comentario = document.getElementById("comentario").value;
 
-      fetch("http://localhost:5000/comentarios", {
+      fetch("https://backend-8xsi.onrender.com/comentarios", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ dispositivoId, usuario, comentario }),
