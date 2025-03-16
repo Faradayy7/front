@@ -1,6 +1,6 @@
 const API_URL = "http://localhost:5000";
 
-// Manejar el formulario de login
+
 document.getElementById("login-form").addEventListener("submit", async (e) => {
   e.preventDefault();
 
@@ -18,7 +18,7 @@ document.getElementById("login-form").addEventListener("submit", async (e) => {
 
     if (response.ok) {
       localStorage.setItem("token", data.token);
-      window.location.href = "admin.html"; // Redirigir al panel de administración
+      window.location.href = "admin.html"; 
     } else {
       alert("Error: " + data.message);
     }
