@@ -1,6 +1,6 @@
 const API_URL = "https://backend-8xsi.onrender.com";
 
-// Cargar dispositivos desde la API
+
 async function cargarDispositivos() {
   try {
     const response = await fetch(`${API_URL}/dispositivos`);
@@ -11,7 +11,7 @@ async function cargarDispositivos() {
   }
 }
 
-// Renderizar dispositivos en la página
+
 function renderizarDispositivos(dispositivos) {
   const lista = document.getElementById("lista-dispositivos");
   lista.innerHTML = "";
@@ -31,7 +31,7 @@ function renderizarDispositivos(dispositivos) {
   });
 }
 
-// Filtrar dispositivos según búsqueda y filtros
+
 function filtrarDispositivos() {
   const busqueda = document.getElementById("search").value.toLowerCase();
   const marca = document.getElementById("filtro-marca").value;
@@ -50,7 +50,7 @@ function filtrarDispositivos() {
     });
 }
 
-// Eventos de búsqueda y filtrado
+
 document
   .getElementById("search")
   .addEventListener("input", filtrarDispositivos);
@@ -61,5 +61,5 @@ document
   .getElementById("filtro-tipo")
   .addEventListener("change", filtrarDispositivos);
 
-// Cargar dispositivos al iniciar la página
+
 window.onload = cargarDispositivos;
