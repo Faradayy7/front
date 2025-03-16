@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrar Dispositivos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Administrar Dispositivos</h1>
+            <a href="index.html" class="btn btn-secondary">Volver</a>
+        </div>
+
+        <h2>Agregar Nuevo Dispositivo</h2>
+        <form id="form-dispositivo" class="mb-4">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" id="nombre" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="marca" class="form-label">Marca</label>
+                <input type="text" id="marca" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="tipo" class="form-label">Tipo</label>
+                <select id="tipo" class="form-select" required>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="wearable">Wearable</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <textarea id="descripcion" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-success">Agregar Dispositivo</button>
+        </form>
+
+        <h2>Lista de Dispositivos</h2>
+        <div id="lista-dispositivos"></div>
+    </div>
+
+    <script src="/frontend/admin.js"></script>
+</body>
+
+</html>

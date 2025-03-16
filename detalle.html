@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalles del Dispositivo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="container mt-4">
+        <button class="btn btn-secondary" onclick="window.history.back()">Volver</button>
+        <h1 id="nombre"></h1>
+        <p><strong>Marca:</strong> <span id="marca"></span></p>
+        <p><strong>Tipo:</strong> <span id="tipo"></span></p>
+        <p id="descripcion"></p>
+        <img id="imagen" src="" alt="Imagen del dispositivo" class="img-fluid">
+
+        <h3 class="mt-4">Especificaciones</h3>
+        <div id="especificaciones"></div>
+
+        <h3 class="mt-4">Comentarios</h3>
+        <div id="comentarios"></div>
+
+        <h4>Agregar Comentario</h4>
+        <form id="comentario-form">
+            <div class="mb-3">
+                <label for="usuario" class="form-label">Nombre</label>
+                <input type="text" id="usuario" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label for="comentario" class="form-label">Comentario</label>
+                <textarea id="comentario" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar comentario</button>
+        </form>
+    </div>
+
+    <script src="/frontend/detalle.js"></script>
+</body>
+
+</html>

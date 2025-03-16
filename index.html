@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Dispositivos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles.css">
+</head>
+
+<body>
+    <div class="container my-4">
+        <div class="d-flex justify-content-between align-items-center mb-4">
+            <h1>Lista de Dispositivos</h1>
+            <a href="/frontend/login.html" class="btn btn-primary">Iniciar Sesión</a>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <input type="text" id="search" class="form-control" placeholder="Buscar dispositivos...">
+            </div>
+            <div class="col-md-3">
+                <select id="filtro-marca" class="form-select">
+                    <option value="">Todas las marcas</option>
+                    <option value="Apple">Apple</option>
+                    <option value="Samsung">Samsung</option>
+                    <option value="Xiaomi">Xiaomi</option>
+                </select>
+            </div>
+            <div class="col-md-3">
+                <select id="filtro-tipo" class="form-select">
+                    <option value="">Todos los tipos</option>
+                    <option value="smartphone">Smartphone</option>
+                    <option value="tablet">Tablet</option>
+                    <option value="wearable">Wearable</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="container mt-4">
+            <h1 class="text-center">Lista de Dispositivos</h1>
+            <div class="row" id="lista-dispositivos"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/frontend/script.js"></script>
+</body>
+
+</html>
