@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000";
+const API_URL = "https://backend-8xsi.onrender.com";
 
 
 document.getElementById("login-form").addEventListener("submit", async (e) => {
