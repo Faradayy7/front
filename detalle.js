@@ -5,7 +5,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
   console.error("Error: ID de dispositivo inválido o faltante.");
   document.body.innerHTML = "<h3>Error: Dispositivo no encontrado.</h3>";
 } else {
-  // Obtener datos del dispositivo
+
   fetch(`http://localhost:5000/dispositivos/${dispositivoId}`)
     .then((response) => response.json())
     .then((data) => {
@@ -19,7 +19,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
     })
     .catch((error) => console.error("Error al obtener el dispositivo:", error));
 
-  // Obtener comentarios del dispositivo
+  
   fetch(`http://localhost:5000/comentarios/${dispositivoId}`)
     .then((response) => response.json())
     .then((comentarios) => {
@@ -41,7 +41,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
     })
     .catch((error) => console.error("Error al obtener comentarios:", error));
 
-  // Enviar comentario
+  
   document
     .getElementById("comentario-form")
     .addEventListener("submit", function (event) {
@@ -58,7 +58,7 @@ if (!dispositivoId || dispositivoId.length !== 24) {
         .then((response) => response.json())
         .then((data) => {
           console.log("Comentario agregado:", data);
-          location.reload(); // Recargar la página para ver el nuevo comentario
+          location.reload(); 
         })
         .catch((error) => console.error("Error al enviar comentario:", error));
     });
